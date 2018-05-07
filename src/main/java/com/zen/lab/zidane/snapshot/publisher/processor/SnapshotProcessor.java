@@ -1,4 +1,4 @@
-package com.zen.lab.zidane.snapshot.publisher.consumer;
+package com.zen.lab.zidane.snapshot.publisher.processor;
 
 import com.zen.lab.zidane.snapshot.publisher.infra.KafkaProperties;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
