@@ -11,7 +11,7 @@ import org.apache.kafka.streams.kstream.KTable;
 
 import java.util.Properties;
 
-public class SnapshotTransformer {
+public class SnapshotProcessor {
 
     public static void main(String[] args) {
         Properties config = new Properties();
