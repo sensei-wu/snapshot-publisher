@@ -1,0 +1,3 @@
+com/zen/lab/zidane/snapshot/publisher/consumer/SnapshotTransformer.class
+com/zen/lab/zidane/snapshot/publisher/infra/KafkaProperties.class
+com/zen/lab/zidane/snapshot/publisher/consumer/FavouriteColourApp.class
