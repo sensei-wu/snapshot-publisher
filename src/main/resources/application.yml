@@ -1,0 +1,8 @@
+snapshot-publisher:
+  kafka-streams:
+    application-id-config: zidane-snapshot-publisher-app
+    auto-offset-reset-config: earliest
+    commit-interval-ms-config: 2000
+    input-topic: zidane-snapshot-queue
+    internal-topic: zidane-snapshot-internal
+    bootstrap-servers: localhost:9092
