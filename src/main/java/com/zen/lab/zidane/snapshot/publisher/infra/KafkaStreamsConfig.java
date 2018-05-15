@@ -24,10 +24,7 @@ public class KafkaStreamsConfig {
     @Bean("ZidanePublisherTopology")
     public TopologyBuilder createTopologyBuilder() {
         KStreamBuilder builder = new KStreamBuilder();
-        KStream<String, String> snapshotStream = builder.stream(kafkaProperties.getInputTopic());
-        snapshotStream.to(kafkaProperties.getInternalTopic());
-        //This queue should be a log compacted queue for optimal space management. But otherwise it has no impact on behaviour
-        KTable<String, String> snapshotTable = builder.table(kafkaProperties.getInternalTopic());
+        KTable<String, String> snapshotTable = builder.table(kafkaProperties.getInputTopic());
         snapshotTable.toStream().foreach((fixtureId, snapshotMessage) -> ebetPublisher.publish(snapshotMessage));
         return builder;
     }
